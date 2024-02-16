@@ -18,7 +18,7 @@ const DropDown = () => {
     // console.log(dropLabel, dropOptions);
   };
   return (
-    <>
+    <div>
       <div>
         <input
           placeholder="Enter Label"
@@ -33,7 +33,7 @@ const DropDown = () => {
         </button>
         {/* <button>Remove</button> */}
       </div>
-    </>
+    </div>
   );
 };
 

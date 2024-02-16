@@ -15,7 +15,7 @@ const Element = () => {
     setElement(value);
   };
   return (
-    <>
+    <div>
       <div className="element-container">
         <span onClick={() => handleElement("textinput")}>Text Input</span>
         <span onClick={() => handleElement("textarea")}>Text Area</span>
@@ -30,7 +30,7 @@ const Element = () => {
         {element === "checkbox" && <CheckBox />}
         {element === "radio" && <Radio />}
       </div>
-    </>
+    </div>
   );
 };
 

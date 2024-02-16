@@ -17,7 +17,7 @@ const TextInput = () => {
     dispatch(addText({ id: small_id, label: textValue }));
   };
   return (
-    <>
+    <div>
       <div>
         <input
           placeholder="Enter Label"
@@ -26,7 +26,7 @@ const TextInput = () => {
         <button onClick={() => handleClick(textValue)}>Add To Form</button>
         {/* <button>Remove</button> */}
       </div>
-    </>
+    </div>
   );
 };
 

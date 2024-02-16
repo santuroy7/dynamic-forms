@@ -11,7 +11,7 @@ const TextArea = () => {
     dispatch(addAreaLabel(areaValue));
   };
   return (
-    <>
+    <div>
       <div>
         <input
           placeholder="Enter Label"
@@ -20,7 +20,7 @@ const TextArea = () => {
         <button onClick={() => handleClick(areaValue)}>Add To Form</button>
         {/* <button>Remove</button> */}
       </div>
-    </>
+    </div>
   );
 };
 
