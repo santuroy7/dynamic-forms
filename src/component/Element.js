@@ -1,5 +1,5 @@
 import React from "react";
-import "./Element.css";
+import "../css/Element.css";
 import { useState } from "react";
 import TextInput from "./TextInput";
 import TextArea from "./TextArea";

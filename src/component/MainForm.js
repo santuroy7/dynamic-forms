@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/MainForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import { removeText } from "../store/textSlice";
 import { removeArea } from "../store/areaSlice";
@@ -10,7 +11,7 @@ const MainForm = () => {
   const areaLabel = useSelector((store) => store.areaSlice.label);
   const dropDownData = useSelector((store) => store.dropDownSlice.dropDown);
   const checkData = useSelector((store) => store.checkSlice.box);
-  console.log(checkData);
+  console.log(textLabel);
   // const checkBoxData = useSelector((store) => store.checkBoxSlice.checkBox);
   // console.log(checkBoxData);
   const removeTextInput = (e) => {
@@ -26,14 +27,20 @@ const MainForm = () => {
     dispatch(removeDrop(e));
   };
   return (
-    <div>
+    <div className="form-main-container">
       <form>
-        <div>
+        <div className="input-text">
           {textLabel.map((e, index) => (
             <div key={index}>
               <label>{e.label}</label>
               <input type="text" />
-              <button onClick={() => removeTextInput(e.id)}>Remove</button>
+              <button
+                onClick={() => {
+                  removeTextInput(e.id);
+                }}
+              >
+                Remove
+              </button>
             </div>
           ))}
         </div>
