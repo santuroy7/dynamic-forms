@@ -16,12 +16,38 @@ const Element = () => {
   };
   return (
     <div>
-      <div className="element-container">
-        <span onClick={() => handleElement("textinput")}>Text Input</span>
-        <span onClick={() => handleElement("textarea")}>Text Area</span>
-        <span onClick={() => handleElement("dropdown")}>Dropdown</span>
-        <span onClick={() => handleElement("checkbox")}> Checkbox</span>
-        <span onClick={() => handleElement("radio")}>Radio button</span>
+      <div className="inline-grid grid-cols-2 gap-4 m-3 p-2">
+        <span
+          className="bg-cyan-700 text-center ml-5 hover:bg-cyan-500 text-white font-bold py-2 px-20 border border-cyan-700 rounded cursor-pointer"
+          onClick={() => handleElement("textinput")}
+        >
+          Text Input
+        </span>
+        <span
+          className="bg-cyan-700 text-center ml-5 hover:bg-cyan-500 text-white font-bold py-2 px-20 border border-cyan-700 rounded cursor-pointer"
+          onClick={() => handleElement("textarea")}
+        >
+          Text Area
+        </span>
+        <span
+          className="bg-cyan-700 text-center ml-5 hover:bg-cyan-500 text-white font-bold py-2 px-20 border border-cyan-700 rounded cursor-pointer"
+          onClick={() => handleElement("dropdown")}
+        >
+          Dropdown
+        </span>
+        <span
+          className="bg-cyan-700 text-center ml-5 hover:bg-cyan-500 text-white font-bold py-2 px-20 border border-cyan-700 rounded cursor-pointer"
+          onClick={() => handleElement("checkbox")}
+        >
+          {" "}
+          Checkbox
+        </span>
+        <span
+          className="bg-cyan-700 text-center ml-5 hover:bg-cyan-500 text-white font-bold py-2 px-20 border border-cyan-700 rounded cursor-pointer"
+          onClick={() => handleElement("radio")}
+        >
+          Radio button
+        </span>
       </div>
       <div>
         {element === "textinput" && <TextInput />}

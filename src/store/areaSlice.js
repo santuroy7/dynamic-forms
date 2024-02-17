@@ -3,17 +3,17 @@ import { createSlice } from "@reduxjs/toolkit";
 const areaSlice = createSlice({
   name: "areaSlice",
   initialState: {
-    label: [],
+    labels: [],
   },
   reducers: {
     addAreaLabel: (state, action) => {
-      state.label.push(action.payload);
+      state.labels.push(action.payload);
     },
     removeArea: (state, action) => {
-      const newlabel = action.payload;
+      const new_id = action.payload;
       // console.log(newlabel);
       // console.log(action);
-      state.label = state.label.filter((label) => label !== newlabel);
+      state.labels = state.labels.filter((label) => label.id !== new_id);
     },
   },
 });

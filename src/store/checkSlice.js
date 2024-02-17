@@ -17,8 +17,14 @@ const checkSlice = createSlice({
       //   state.dropDown = [...state.dropDown, action.payload];
       console.log(state.box);
     },
+    removeCheck: (state, action) => {
+      const new_id = action.payload;
+      //   console.log("Dropdown remove", newlabel);
+      //   console.log("Dropdown remove", action);
+      state.box = state.box.filter((e) => e.id !== new_id);
+    },
   },
 });
 
-export const { addCheck } = checkSlice.actions;
+export const { addCheck, removeCheck } = checkSlice.actions;
 export default checkSlice.reducer;
