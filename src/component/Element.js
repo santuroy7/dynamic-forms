@@ -1,9 +1,7 @@
 import React from "react";
-import "../css/Element.css";
 import { useState } from "react";
 import TextInput from "./TextInput";
 import TextArea from "./TextArea";
-// import Dropdown from "./Dropdown";
 import DropDown from "./DropDown";
 import CheckBox from "./CheckBox";
 import Radio from "./Radio";

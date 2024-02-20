@@ -10,18 +10,10 @@ const DropDown = () => {
   const handleClick = (dropLabel, dropOptions) => {
     dropOptions = dropOptions.split(",");
     const unique_id = uuid();
-    // Get first 8 characters using slice
     const small_id = unique_id.slice(0, 8);
-    // console.log(dropOptions);
-    // const obj = {
-    //   label: dropLabel,
-    //   options: dropOptions,
-    // };
-    // dispatch(addDropDown(obj));
     dispatch(
       addDropDown({ label: dropLabel, id: small_id, options: dropOptions })
     );
-    // console.log(dropLabel, dropOptions);
   };
   return (
     <div className="mx-10">
@@ -45,7 +37,6 @@ const DropDown = () => {
         >
           Add To Form
         </button>
-        {/* <button>Remove</button> */}
       </div>
     </div>
   );

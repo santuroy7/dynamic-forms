@@ -11,11 +11,8 @@ const textSlice = createSlice({
     },
     removeText: (state, action) => {
       const new_id = action.payload;
-      // console.log(new_id);
-      // console.log(action);
       state.labels = state.labels.filter((label) => label.id !== new_id);
     },
-    // remove: (state, action) => {},
   },
 });
 

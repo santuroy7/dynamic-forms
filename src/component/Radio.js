@@ -10,7 +10,6 @@ const Radio = () => {
   const handleClick = (radioLabel, radioOptions) => {
     radioOptions = radioOptions.split(",");
     const unique_id = uuid();
-    // Get first 8 characters using slice
     const small_id = unique_id.slice(0, 8);
     dispatch(
       addRadio({ label: radioLabel, id: small_id, options: radioOptions })
@@ -38,7 +37,6 @@ const Radio = () => {
         >
           Add To Form
         </button>
-        {/* <button>Remove</button> */}
       </div>
     </div>
   );

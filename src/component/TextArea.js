@@ -9,7 +9,6 @@ const TextArea = () => {
   const [areaValue, setAreaValue] = useState();
   const handleClick = (areaValue) => {
     const unique_id = uuid();
-    // Get first 8 characters using slice
     const small_id = unique_id.slice(0, 8);
     console.log(areaValue);
     dispatch(addAreaLabel({ id: small_id, label: areaValue }));
@@ -31,7 +30,6 @@ const TextArea = () => {
         >
           Add To Form
         </button>
-        {/* <button>Remove</button> */}
       </div>
     </div>
   );

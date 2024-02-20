@@ -4,7 +4,6 @@ import { useState } from "react";
 import { addCheck } from "../store/checkSlice";
 import { v4 as uuid } from "uuid";
 
-// import { addCheckBox } from "../store/checkBoxSlice";
 const CheckBox = () => {
   const [checkBoxLabel, setCheckBoxLabel] = useState();
   const [checkBoxOptions, setCheckBoxOptions] = useState("");
@@ -12,7 +11,6 @@ const CheckBox = () => {
   const handleClick = (checkBoxLabel, checkBoxOptions) => {
     checkBoxOptions = checkBoxOptions.split(",");
     const unique_id = uuid();
-    // Get first 8 characters using slice
     const small_id = unique_id.slice(0, 8);
     console.log(checkBoxOptions, checkBoxLabel);
     dispatch(

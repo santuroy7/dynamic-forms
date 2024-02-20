@@ -11,8 +11,6 @@ const areaSlice = createSlice({
     },
     removeArea: (state, action) => {
       const new_id = action.payload;
-      // console.log(newlabel);
-      // console.log(action);
       state.labels = state.labels.filter((label) => label.id !== new_id);
     },
   },
